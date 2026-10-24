@@ -1,21 +1,22 @@
- <div align="center">
+<div align="center">
 
 <img src="./dvorezzky-profile-banner.svg" width="100%" alt="DvoreZZKy — профиль разработчика" />
 
-### Разработчик на C# и .NET
+### 💜 Юный разработчик с реальным опытом
 
-**DvoreZZKy — к вашим услугам.**
+**DvoreZZKy (Дворкин Виктор) — к вашим услугам.**
 
-Пишу на C# — это мой основной язык программирования.  
-Изучаю C++ и Java, разрабатываю собственные проекты и постоянно совершенствую свои навыки.
+Пишу на C# — это мой родной язык. Параллельно учусь в Академии ТОП (C#, C++, SQLite, EF Core, Avalonia, Arduino).  
+Готовлюсь к ОГЭ по физике и информатике. Финалист VR-хакатона на платформе Varwin.  
+Открыт для интересных проектов и заказов!
 
 [🌐 Персональный сайт](https://dvorezzky.github.io) · [💻 Репозитории](https://github.com/DvoreZZKy?tab=repositories) · [📂 Проекты](https://github.com/DvoreZZKy/IMoRS)
 
 ---
 
-## 🛠️ Технологии
+## 🛠️ Технологии и навыки
 
-<img src="https://skillicons.dev/icons?i=cs,dotnet,cpp,javascript,java,git,github,visualstudio,rider,clion,css,html" alt="Технологии и инструменты" />
+<img src="https://skillicons.dev/icons?i=cs,dotnet,cpp,javascript,java,html,css,git,github,visualstudio,vscode,rider,clion,arduino" alt="Технологии и инструменты" />
 
 | Направление | Технологии |
 |---|---|
@@ -24,8 +25,9 @@
 | Разработка интерфейсов | Avalonia UI |
 | Архитектура | MVVM |
 | Работа с данными | Entity Framework Core, SQLite |
-| Изучаю | C++, Java |
-| Инструменты | Git, GitHub, Visual Studio |
+| Веб-технологии | JavaScript, HTML, CSS |
+| Изучаю | C++, Java, Arduino |
+| Инструменты | Git, GitHub, Visual Studio, Visual Studio Code, Rider, CLion |
 
 ---
 
@@ -67,5 +69,4 @@
 ---
 
 *💜 Создаю проекты, изучаю технологии и пишу код.*
-</div>
 </div>
