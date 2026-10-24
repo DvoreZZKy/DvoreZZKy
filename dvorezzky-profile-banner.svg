@@ -1,80 +1,225 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
   <title id="title">DvoreZZKy — профиль разработчика</title>
-  <desc id="desc">Анимированный фиолетово-синий баннер с линиями кода, свечением и информацией о разработчике.</desc>
+  <desc id="desc">Анимированный фиолетовый баннер с плавными переливами, кодом, кристаллом и информацией о разработчике.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#090b18"/>
-      <stop offset="55%" stop-color="#171331"/>
-      <stop offset="100%" stop-color="#081a2c"/>
+      <stop offset="0%" stop-color="#0b0316"/>
+      <stop offset="50%" stop-color="#1c0b36"/>
+      <stop offset="100%" stop-color="#110522"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#a78bfa"/>
-      <stop offset="50%" stop-color="#8b5cf6"/>
-      <stop offset="100%" stop-color="#38bdf8"/>
+    
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbcfe8">
+        <animate attributeName="stop-color" values="#fbcfe8;#e9d5ff;#c084fc;#e9d5ff;#fbcfe8" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#d8b4fe">
+        <animate attributeName="stop-color" values="#d8b4fe;#c084fc;#a855f7;#c084fc;#d8b4fe" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#c084fc">
+        <animate attributeName="stop-color" values="#c084fc;#a855f7;#7c3aed;#a855f7;#c084fc" dur="6s" repeatCount="indefinite"/>
+      </stop>
     </linearGradient>
+
+    <linearGradient id="nickGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e9d5ff">
+        <animate attributeName="stop-color" 
+                 values="#e9d5ff; #e9d5ff; #c084fc; #c084fc; #fbcfe8; #fbcfe8; #e9d5ff; #e9d5ff" 
+                 keyTimes="0; 0.15; 0.35; 0.5; 0.65; 0.8; 0.9; 1" 
+                 dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#c084fc">
+        <animate attributeName="stop-color" 
+                 values="#c084fc; #c084fc; #a855f7; #a855f7; #d8b4fe; #d8b4fe; #c084fc; #c084fc" 
+                 keyTimes="0; 0.15; 0.35; 0.5; 0.65; 0.8; 0.9; 1" 
+                 dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
     <radialGradient id="glow">
-      <stop offset="0%" stop-color="#8b5cf6" stop-opacity=".3"/>
-      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#a855f7" stop-opacity=".35"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
     </radialGradient>
+    
+    <linearGradient id="crystal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#d8b4fe" stop-opacity="0.8">
+        <animate attributeName="stop-color" values="#d8b4fe;#c084fc;#e9d5ff;#d8b4fe" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.6"/>
+    </linearGradient>
+    
     <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="5" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    
+    <filter id="strongGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur1"/>
+      <feGaussianBlur stdDeviation="8" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
     <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M32 0H0V32" fill="none" stroke="#a78bfa" stroke-opacity=".09" stroke-width="1"/>
+      <path d="M32 0H0V32" fill="none" stroke="#c084fc" stroke-opacity=".08" stroke-width="1"/>
     </pattern>
+    
     <clipPath id="round"><rect width="1200" height="360" rx="24"/></clipPath>
   </defs>
+  
   <g clip-path="url(#round)">
     <rect width="1200" height="360" fill="url(#bg)"/>
     <rect width="1200" height="360" fill="url(#grid)"/>
+    
+    <!-- ДНК -->
+    <g opacity="0.12" font-family="monospace" font-size="12" fill="#d8b4fe">
+      <text x="600" y="50">10110</text><text x="620" y="70">010</text><text x="580" y="90">110</text><text x="640" y="110">01</text>
+      <text x="590" y="130">101</text><text x="630" y="150">011</text><text x="610" y="170">10</text><text x="580" y="190">0101</text>
+      <text x="650" y="210">110</text><text x="600" y="230">01</text><text x="620" y="250">101</text><text x="590" y="270">10</text>
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="0 40" dur="10s" repeatCount="indefinite"/>
+    </g>
+
     <ellipse cx="930" cy="120" rx="350" ry="250" fill="url(#glow)">
       <animate attributeName="cx" values="900;1020;900" dur="9s" repeatCount="indefinite"/>
     </ellipse>
-    <path d="M720 0L570 360M820 0L670 360M920 0L770 360" stroke="#8b5cf6" stroke-opacity=".12" stroke-width="2"/>
+    
+    <path d="M720 0L570 360M820 0L670 360M920 0L770 360" stroke="url(#accent)" stroke-opacity=".15" stroke-width="2"/>
+    
     <g fill="none" stroke="url(#accent)" stroke-width="2" opacity=".8">
       <path d="M780 78h82l18 18h72"><animate attributeName="stroke-dasharray" values="0 220;220 0;0 220" dur="7s" repeatCount="indefinite"/></path>
       <path d="M835 126h46l18 -18h120"><animate attributeName="stroke-dasharray" values="220 0;0 220;220 0" dur="8s" repeatCount="indefinite"/></path>
       <path d="M760 230h110l20 -20h90"><animate attributeName="stroke-dasharray" values="0 250;250 0;0 250" dur="9s" repeatCount="indefinite"/></path>
     </g>
-    <g fill="#a78bfa" opacity=".9">
+    
+    <g fill="#e9d5ff" opacity=".9">
       <circle cx="952" cy="96" r="4"><animate attributeName="r" values="3;6;3" dur="2.5s" repeatCount="indefinite"/></circle>
       <circle cx="1000" cy="108" r="3"><animate attributeName="opacity" values=".2;1;.2" dur="3s" repeatCount="indefinite"/></circle>
       <circle cx="980" cy="210" r="4"><animate attributeName="r" values="4;7;4" dur="3.5s" repeatCount="indefinite"/></circle>
       <circle cx="862" cy="248" r="3"><animate attributeName="opacity" values="1;.25;1" dur="2.8s" repeatCount="indefinite"/></circle>
     </g>
-    <g transform="translate(830 65)" opacity=".16" fill="#c4b5fd" font-family="monospace" font-size="17">
+    
+    <!-- Звездная пыль -->
+    <g fill="#f3e8ff">
+      <circle cx="150" cy="300" r="1.5"><animate attributeName="cy" values="300;250;300" dur="12s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;0.8;0.2" dur="6s" repeatCount="indefinite"/></circle>
+      <circle cx="250" cy="100" r="1"><animate attributeName="cy" values="100;60;100" dur="15s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.8;0.1;0.8" dur="8s" repeatCount="indefinite"/></circle>
+      <circle cx="450" cy="200" r="2"><animate attributeName="cy" values="200;150;200" dur="10s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.7;0.1" dur="5s" repeatCount="indefinite"/></circle>
+      <circle cx="680" cy="280" r="1.5"><animate attributeName="cy" values="280;220;280" dur="14s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.6;0.2;0.6" dur="7s" repeatCount="indefinite"/></circle>
+      <circle cx="850" cy="50" r="1"><animate attributeName="cy" values="50;20;50" dur="9s" repeatCount="indefinite"/></circle>
+      <circle cx="1100" cy="280" r="2"><animate attributeName="cy" values="280;230;280" dur="11s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.3;0.9;0.3" dur="4s" repeatCount="indefinite"/></circle>
+    </g>
+
+    <!-- Кристалл -->
+    <g transform="translate(1050, 60)" filter="url(#strongGlow)">
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite"/>
+        <polygon points="0,-20 15,0 0,20 -15,0" fill="url(#crystal)" stroke="#fbcfe8" stroke-width="1"/>
+        <polygon points="0,-20 0,20 -15,0" fill="#7c3aed" opacity="0.4"/>
+        <polygon points="0,-20 0,20 15,0" fill="#ffffff" opacity="0.2"/>
+        <polygon points="0,-20 15,0 0,20 -15,0" fill="url(#accent)" opacity="0.3">
+           <animate attributeName="opacity" values="0;0.6;0" dur="3s" repeatCount="indefinite"/>
+        </polygon>
+      </g>
+      <circle r="25" fill="none" stroke="#d8b4fe" stroke-width="1" stroke-dasharray="2 6">
+        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="4s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    
+    <!-- Перо -->
+    <g transform="translate(180, 300)" opacity="0.6" fill="none" stroke="url(#accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <animateTransform attributeName="transform" type="translate" values="180,300; 180,290; 180,300" dur="5s" repeatCount="indefinite"/>
+      <path d="M0,0 Q10,-10 20,-20 Q15,-15 10,-5 Z"/>
+      <path d="M0,0 Q-5,-5 -10,-10"/>
+    </g>
+    
+    <!-- Водяной знак с кодом -->
+    <g transform="translate(830 65)" opacity=".15" fill="#e9d5ff" font-family="monospace" font-size="17">
       <text x="0" y="0">public class Developer</text>
       <text x="18" y="29">{</text>
-      <text x="36" y="58">string Language = "C#";</text>
-      <text x="36" y="87">bool KeepLearning = true;</text>
+      <text x="36" y="58">string Name = "Viktor";</text>
+      <text x="36" y="87">string Status = "ReadyForProjects";</text>
       <text x="18" y="116">}</text>
     </g>
-    <g transform="translate(76 72)">
-      <rect x="0" y="0" width="8" height="194" rx="4" fill="url(#accent)"/>
-      <text x="34" y="22" fill="#c4b5fd" font-family="monospace" font-size="16" letter-spacing="4">ПРОФИЛЬ РАЗРАБОТЧИКА</text>
-      <text x="30" y="91" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="700" letter-spacing="-2">DvoreZZKy<tspan fill="#a78bfa">_</tspan>
-        <animate attributeName="opacity" values="1;1;.82;1" dur="4s" repeatCount="indefinite"/>
+    
+    <g transform="translate(76 50)">
+      <rect x="0" y="0" width="8" height="260" rx="4" fill="url(#accent)"/>
+      
+      <!-- Плашка "ДОСТУПЕН ДЛЯ ЗАКАЗОВ" -->
+      <rect x="34" y="5" width="220" height="24" rx="12" fill="#10b981" fill-opacity=".2" stroke="#34d399" stroke-opacity=".8"/>
+      <text x="144" y="22" text-anchor="middle" fill="#a7f3d0" font-family="monospace" font-size="12" font-weight="bold">ДОСТУПЕН ДЛЯ ЗАКАЗОВ</text>
+
+      <!-- Никнейм с плавным затуханием "_" -->
+      <text x="30" y="105" fill="url(#nickGradient)" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="700" letter-spacing="-2" filter="url(#softGlow)">
+        DvoreZZKy
+        <tspan fill="url(#nickGradient)">
+          _
+          <animate attributeName="opacity" 
+                   values="1;1;0;0;1;1" 
+                   keyTimes="0;0.1;0.45;0.55;0.9;1" 
+                   dur="4s" 
+                   repeatCount="indefinite"/>
+        </tspan>
       </text>
-      <text x="34" y="130" fill="#dbeafe" font-family="Arial, Helvetica, sans-serif" font-size="23">Разработчик на C# / .NET</text>
-      <text x="34" y="164" fill="#a5b4fc" font-family="Arial, Helvetica, sans-serif" font-size="17">Создаю проекты · Изучаю новое · Пишу код</text>
-      <g transform="translate(34 190)">
-        <rect width="94" height="30" rx="15" fill="#8b5cf6" fill-opacity=".18" stroke="#a78bfa" stroke-opacity=".7"/>
-        <text x="47" y="20" text-anchor="middle" fill="#ddd6fe" font-family="monospace" font-size="13">C# / .NET</text>
-        <rect x="106" width="76" height="30" rx="15" fill="#38bdf8" fill-opacity=".1" stroke="#38bdf8" stroke-opacity=".65"/>
-        <text x="144" y="20" text-anchor="middle" fill="#bae6fd" font-family="monospace" font-size="13">Avalonia</text>
-        <rect x="194" width="72" height="30" rx="15" fill="#8b5cf6" fill-opacity=".12" stroke="#a78bfa" stroke-opacity=".55"/>
-        <text x="230" y="20" text-anchor="middle" fill="#ddd6fe" font-family="monospace" font-size="13">MVVM</text>
+      
+      <!-- Описание -->
+      <text x="34" y="145" fill="#f3e8ff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold">Дворкин Виктор — юный разработчик с реальным опытом</text>
+      <text x="34" y="170" fill="#d8b4fe" font-family="Arial, Helvetica, sans-serif" font-size="15">9 класс, гимназия №15 «Содружество» · Академия ТОП (C#, C++, Arduino)</text>
+      <text x="34" y="195" fill="#d8b4fe" font-family="Arial, Helvetica, sans-serif" font-size="15">Готовлюсь к ОГЭ по физике и информатике · Финалист VR-хакатона (Varwin)</text>
+      
+      <!-- Теги (Обновленный стек) -->
+      <g transform="translate(34 220)">
+        <!-- C# -->
+        <rect width="50" height="28" rx="14" fill="url(#accent)" fill-opacity=".15" stroke="url(#accent)" stroke-opacity=".6"/>
+        <text x="25" y="19" text-anchor="middle" fill="#f3e8ff" font-family="monospace" font-size="13">C#</text>
+        
+        <!-- Avalonia -->
+        <rect x="62" width="80" height="28" rx="14" fill="#7c3aed" fill-opacity=".15" stroke="url(#accent)" stroke-opacity=".6"/>
+        <text x="102" y="19" text-anchor="middle" fill="#e9d5ff" font-family="monospace" font-size="13">Avalonia</text>
+        
+        <!-- EF Core -->
+        <rect x="154" width="76" height="28" rx="14" fill="url(#accent)" fill-opacity=".15" stroke="url(#accent)" stroke-opacity=".6"/>
+        <text x="192" y="19" text-anchor="middle" fill="#f3e8ff" font-family="monospace" font-size="13">EF Core</text>
+
+        <!-- SQLite -->
+        <rect x="242" width="66" height="28" rx="14" fill="#7c3aed" fill-opacity=".15" stroke="url(#accent)" stroke-opacity=".6"/>
+        <text x="275" y="19" text-anchor="middle" fill="#e9d5ff" font-family="monospace" font-size="13">SQLite</text>
+        
+        <!-- Java -->
+        <rect x="320" width="56" height="28" rx="14" fill="url(#accent)" fill-opacity=".15" stroke="url(#accent)" stroke-opacity=".6"/>
+        <text x="348" y="19" text-anchor="middle" fill="#f3e8ff" font-family="monospace" font-size="13">Java</text>
+
+        <!-- JS / HTML / CSS -->
+        <rect x="388" width="130" height="28" rx="14" fill="#7c3aed" fill-opacity=".15" stroke="url(#accent)" stroke-opacity=".6"/>
+        <text x="453" y="19" text-anchor="middle" fill="#e9d5ff" font-family="monospace" font-size="13">JS / HTML / CSS</text>
       </g>
     </g>
+    
     <g transform="translate(1060 180)" filter="url(#softGlow)">
-      <circle r="54" fill="#11132b" stroke="url(#accent)" stroke-width="2"/>
-      <circle r="43" fill="none" stroke="#a78bfa" stroke-opacity=".35" stroke-dasharray="4 7">
+      <circle r="54" fill="#150826" stroke="url(#accent)" stroke-width="2"/>
+      <circle r="43" fill="none" stroke="#d8b4fe" stroke-opacity=".4" stroke-dasharray="4 7">
         <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="28s" repeatCount="indefinite"/>
       </circle>
       <path d="M-15 -20L-34 0l19 20M15 -20L34 0 15 20M8 -29L-8 29" fill="none" stroke="url(#accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
-    <text x="1120" y="324" fill="#94a3b8" font-family="monospace" font-size="12" text-anchor="end">dvorezzky.github.io</text>
-    <rect x="1" y="1" width="1198" height="358" rx="23" fill="none" stroke="#a78bfa" stroke-opacity=".25"/>
+    
+    <!-- Иконка кофе -->
+    <g transform="translate(945, 316)" fill="none" stroke="url(#accent)" stroke-width="1.5" stroke-linecap="round">
+       <path d="M0 0h10v5a5 5 0 0 1 -5 5h0a5 5 0 0 1 -5 -5z" />
+       <path d="M10 2h2a2.5 2.5 0 0 1 0 5h-2" />
+       <path d="M2.5 -3v2.5 M7.5 -3v2.5" />
+       <path d="M3 -6v-1.5 M7 -6v-1.5" opacity="0.6">
+         <animate attributeName="opacity" values="0.2;0.8;0.2" dur="2s" repeatCount="indefinite"/>
+       </path>
+    </g>
+    
+    <!-- Текст ссылки -->
+    <text x="1120" y="324" fill="url(#accent)" font-family="monospace" font-size="12" text-anchor="end">dvorezzky.github.io</text>
+    
+    <!-- ПУНКТИРНАЯ РАМКА ВНУТРИ -->
+    <rect x="8" y="8" width="1184" height="344" rx="16" fill="none" stroke="url(#accent)" stroke-width="2" stroke-dasharray="20 20" opacity="0.6">
+      <animate attributeName="stroke-dashoffset" from="0" to="40" dur="4s" repeatCount="indefinite"/>
+    </rect>
   </g>
 </svg>
